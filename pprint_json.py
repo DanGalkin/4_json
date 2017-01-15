@@ -8,9 +8,9 @@ def load_data(filepath):
 
 
 def pretty_print_json(data):
-    print(json.dumps(data, sort_keys=True, indent=4))
+    print(json.dumps(data, sort_keys=True, indent=4, ensure_ascii=False))
 
 
 if __name__ == '__main__':
     json_filepath = input('Где лежит JSON-файл, который приводим в порядок?')
-    pretty_print_json(load_data(json_filepath)[0])
+    pretty_print_json(load_data(json_filepath))
